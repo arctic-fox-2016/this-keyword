@@ -1,21 +1,31 @@
 "use strict"
 
 // GLOBAL CONTEXT
-let meja = {
-  kaki : 4,
-  tambahkaki: function() {
+const pi = 3.14
+
+class Meja {
+  constructor(){
+    this.kaki = 4;
+  }
+  tambahKaki(){
     this.kaki++
+  }
+  luasPenampangKaki(){
+    return pi * this.kaki * this.kaki
   }
 }
 
-console.log(meja.kaki)
-meja['tambahkaki']()
-console.log(meja.kaki)
+let mejaku = new Meja();
+console.log(mejaku.kaki)
+console.log(mejaku.luasPenampangKaki())
+mejaku.tambahKaki()
+console.log(mejaku.kaki)
+console.log(mejaku.luasPenampangKaki())
 
 
 // RELEASE 0
 // Syntax:
-// node -> this [enter]
+// this.process.version
 // versi node yang terinstall adalah
 // version: 'v6.3.1',
 
