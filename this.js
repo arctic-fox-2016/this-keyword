@@ -1,14 +1,17 @@
 "use strict"
 
 // GLOBAL CONTEXT
+const repl = require('repl');
+var pesan = 'Halo'
+
+repl.start('==> ').context.m = pesan;
 
 
 
-
+// RELEASE 1
+//ini merupakan global subtitusi untuk deklarasi local scope variable, dibawah diberi contoh kelas binatang
 // CLASS CONTEXT
 class Animal {
-
-
   constructor (components) {
     this.name = components ['name']
     this.age = components ['age']
@@ -16,12 +19,12 @@ class Animal {
   }
 
 
-    get name(){
+     cekNama(){
       this.name = name
       return this.name
     }
 
-    get age(){
+    cekUmur(){
       this.age = age
       return this.age
     }
@@ -29,6 +32,3 @@ class Animal {
 
     let hewan = new Animal ({name: 'kucing', age: '3'})
     console.log(hewan.name());
-
-
-// RELEASE 1
